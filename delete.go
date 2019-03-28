@@ -120,7 +120,7 @@ func (d *Delete) run(ctx aws.Context) (*dynamodb.DeleteItemOutput, error) {
 	return output, err
 }
 
-func (d *Delete) deleteInput() *dynamodb.DeleteItemInput {
+func (d *Delete) DeleteInput() *dynamodb.DeleteItemInput {
 	input := &dynamodb.DeleteItemInput{
 		TableName:                 &d.table.name,
 		Key:                       d.key(),

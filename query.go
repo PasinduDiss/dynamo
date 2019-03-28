@@ -453,7 +453,7 @@ func (q *Query) canGetItem() bool {
 	return true
 }
 
-func (q *Query) queryInput() *dynamodb.QueryInput {
+func (q *Query) QueryInput() *dynamodb.QueryInput {
 	req := &dynamodb.QueryInput{
 		TableName:                 &q.table.name,
 		KeyConditions:             q.keyConditions(),

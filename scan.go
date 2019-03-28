@@ -139,7 +139,7 @@ func (s *Scan) AllWithLastEvaluatedKeyContext(ctx aws.Context, out interface{}) 
 	return itr.LastEvaluatedKey(), itr.Err()
 }
 
-func (s *Scan) scanInput() *dynamodb.ScanInput {
+func (s *Scan) ScanInput() *dynamodb.ScanInput {
 	input := &dynamodb.ScanInput{
 		ExclusiveStartKey:         s.startKey,
 		TableName:                 &s.table.name,
